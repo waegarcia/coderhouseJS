@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coderhouse JS</title>
+</head>
+
+<body>
+    <h1>COTIZADOR DE COMPONENTES DE PC</h1>
+    <h2>Descripcion de la aplicacion</h2>
+    <h3><u>Funcionalidad:</u></h3>
+    <ol>
+        <li>Calcula el costo total de los productos ingresados por el usuario.</li>
+        <li>Calcula el valor final de los productos ingresados en función de si se aplica el impuesto IVA o no.</li>
+        <li>Calcula el pago en cuotas sobre el valor final.</li>
+    </ol>
+    <hr>
+    <h2>Componentes de PC</h2>
+    <button id="btnMostrarListado">Mostrar Listado</button><br>
+    <div id="divComponentesPC"></div>
+    <hr>
+    <h3><u>Resultado de la cotizacion:</u></h3>
+    <span>Producto/s ingresado/s:</span>
+    <div id="prodIngresados"></div>
+    <span>---------------------</span><br>
+    <span>Mostrar productos ordenados de menor a mayor precio? </span><button id="btnMayorAMenor">OK</button><br>
+    <div id="prodMayorAMenor"></div>
+    <span>---------------------</span><br>
+    <div id="montoAlMomento"></div>
+    <div id="iva"></div>
+    <div id="montoFinal"></div>
+
+    <script type="text/javascript" src="./js/class/componentePC.js"></script>
+    <script type="text/javascript" src="./js/class/cotizacion.js"></script>
+    <script type="text/javascript" src="./js/functions/functions.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+</body>
+
+</html>
