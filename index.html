@@ -1,42 +1,247 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coderhouse JS</title>
+    <meta name="description" content="Tienda Informatica: Las mejores propuestas para hacer realidad tu PC GAMER.">
+    <meta name="keywords" content="COMPUTADORA, PC, INFORMATICA, GAMER, CPU, MICROPROCESADOR, AMD, INTEL, MOTHERBOARD, MEMORIA RAM, RYZEN, i5, i7, i9">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="icon" href="./img/logos/compu-logo.png">
+    <title>INICIO | CHMR-STORE® - Todo para el gamer!!!</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <h1>COTIZADOR DE COMPONENTES DE PC</h1>
-    <h2>Descripcion de la aplicacion</h2>
-    <h3><u>Funcionalidad:</u></h3>
-    <ol>
-        <li>Calcula el costo total de los productos ingresados por el usuario.</li>
-        <li>Calcula el valor final de los productos ingresados en función de si se aplica el impuesto IVA o no.</li>
-        <li>Calcula el pago en cuotas sobre el valor final.</li>
-    </ol>
-    <hr>
-    <h2>Componentes de PC</h2>
-    <button id="btnMostrarListado">Mostrar Listado</button><br>
-    <div id="divComponentesPC"></div>
-    <hr>
-    <h3><u>Resultado de la cotizacion:</u></h3>
-    <span>Producto/s ingresado/s:</span>
-    <div id="prodIngresados"></div>
-    <span>---------------------</span><br>
-    <span>Mostrar productos ordenados de menor a mayor precio? </span><button id="btnMayorAMenor">OK</button><br>
-    <div id="prodMayorAMenor"></div>
-    <span>---------------------</span><br>
-    <div id="montoAlMomento"></div>
-    <div id="iva"></div>
-    <div id="montoFinal"></div>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark header__navbar">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+                    aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="./img/logos/compu-logo.png" alt="logo CHMR" width="30" height="24" class="d-inline-block align-text-top">
+                    <span>CHMR-STORE</span>
+                </a>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03" data-aos="fade-down" data-aos-delay="200">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active header__hover" href="#">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link header__hover" href="#componentesContainer">COMPONENTES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link header__hover" href="#contactoContainer">CONTACTO</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex header__navbarForm">
+                        <button class="btn btn-outline-success navbarForm__button" type="submit">
+                            <a href="./pages/carrito.html" class="header__button__link">
+                                <i class="fa fa-shopping-cart"></i> Carrito
+                            </a>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="main">
+        <div class="main__texto">
+            <h1 class="main__titulo">CHMR-STORE</h1>
+            <h2 id="main__subtitulo--index">Bienvenido a nuestra pagina de inicio</h2>
 
-    <script type="text/javascript" src="./js/class/componentePC.js"></script>
-    <script type="text/javascript" src="./js/class/cotizacion.js"></script>
-    <script type="text/javascript" src="./js/functions/functions.js"></script>
-    <script type="text/javascript" src="./js/main.js"></script>
+            <!-- HOME -->
+            <!-- carousel desktop -->
+            <div id="carouselDesktop" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselDesktop" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselDesktop" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselDesktop" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./img/carousel/carousel-desktop-1.jpg" class="d-block w-100" alt="Imagen-carousel-desktop. Promo1: Mother Asrock B550.">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/carousel/carousel-desktop-2.jpg" class="d-block w-100" alt="Imagen-carousel-desktop. Promo2: Mother Asus Z590.">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/carousel/carousel-desktop-3.jpg" class="d-block w-100" alt="Imagen-carousel-desktop. Promo3: Gabinetes y fuentes Be Quiet.">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselDesktop" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselDesktop" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <!-- carousel mobile -->
+            <div id="carouselMobile" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselMobile" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselMobile" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="#"><img src="./img/carousel/mobile/carousel-mobile-1.jpg" class="d-block w-100 carouselMobile__img" alt="Imagen-carousel-mobile. PC gamers armadas."></a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#"><img src="./img/carousel/mobile/carousel-mobile-2.jpg" class="d-block w-100 carouselMobile__img" alt="Imagen-carousel-mobile. Armá tu PC."></a>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselMobile" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselMobile" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- COMPONENTES DE PC -->
+        <div id="componentesContainer">
+            <div class="main__texto">
+                <br>
+                <div class="main__componentesImg">
+                    <a href="./pages/error.html"><img src="./img/banners/turnoweb.png" alt="banner grande de turnos" id="bannerGrande"></a>
+                    <a href="./pages/error.html"><img src="./img/banners/turnoweb-min.png" alt="banner chico de turnos" id="bannerChico"></a>
+                </div>
+                <br>
+                <h2>Componentes de PC</h2>
+                <p>Las mejores opciones de hardware de primera linea.</p>
+            </div>
+            <!-- Galeria de imagenes -->
+            <div class="row row-cols-1 row-cols-md-2 g-4 galeria" id="galeria">
+            </div>
+        </div>
+
+        <!-- CONTACTO -->
+        <div id="contactoContainer">
+            <div class="main__texto">
+                <br><br><br>
+                <h2>Contacto</h2>
+                <h4>Dejanos tu consulta y en breve te contestaremos:</h4>
+                <div class="main__form">
+                    <form id="contactoForm" method="get">
+                        <div class="mb-6">
+                            <label for="contactoInputNombre" class="form-label">Nombre:</label>
+                            <input type="input" class="form-control" id="contactoInputNombre">
+                        </div>
+                        <div class="mb-6">
+                            <label for="contactoInputMail" class="form-label">E-mail:</label>
+                            <input type="email" class="form-control" id="contactoInputMail" placeholder="mail@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactoTextArea" class="form-label">Tu comentario:</label>
+                            <textarea class="form-control" id="contactoTextArea" placeholder="comentario..." rows="3"></textarea>
+                        </div>
+                        <input id="contactoSubmit" type="submit" value="Enviar" class="form__button">
+                    </form>
+                </div>
+            </div>
+            <div class="mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3905.519049987925!2d-58.373044870258056!3d-34.60068583552471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc66f274ed%3A0x66ea6e648f46a49a!2zR2FsZXLDrWEgSmFyZMOtbg!5e0!3m2!1ses-419!2sar!4v1625969121542!5m2!1ses-419!2sar"
+                    width="500" height="300" style="margin:20px;border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <!-- logo de whatsapp -->
+        <div class="main__wsp" data-aos="fade-up">
+            <a href="tel:+"><img src="./img/logos/whatsappGreen.png" alt="logo whatsapp" width="90" height="90" class="wsp"></a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__rrss" data-aos="fade-up" data-aos-delay="500">
+            <span class="footer__rrssTexto">Nuestras redes sociales:</span>
+            <div class="footer__rrssImg">
+                <a href="https://es-la.facebook.com/" class="fa fa-facebook-square fa-2x main__link"></a>
+                <a href="https://www.instagram.com/?hl=es-la" class="fa fa-instagram fa-2x main__link"></a>
+                <a href="https://twitter.com/home?lang=es" class="fa fa-twitter-square fa-2x main__link"></a>
+            </div>
+        </div>
+        <div class="footer__legales" data-aos="fade-up">
+            <p>
+                <strong>Aceptación de los términos y condiciones de uso:</strong><br>
+                El uso del Sitio implica la declaración por parte del Usuario de que comprende, conoce y acepta los términos y condiciones que a continuación se detallan, y por ello se obliga expresamente a cumplir con los mismos. 
+                Dichos términos y condiciones, así como sus modificaciones, estarán vigentes en forma inmediata una vez publicadas en el Sitio. 
+                En caso de que el Usuario no comprenda cabalmente o no esté de acuerdo con los Términos y Condiciones que rigen el uso del Sitio, debe abstenerse de utilizarlo.
+                <br><br>
+                <strong>Usuarios que pueden utilizar los servicios del Sitio:</strong><br>
+                Los Servicios sólo estarán disponibles para personas que cuenten con capacidad legal para contratar. No podrán utilizarlos aquellas personas que carezcan de dicha capacidad y los menores de edad. 
+                En el caso de Usuarios de empresas, la persona física registrada como usuario, deberá contar con capacidad para contratar a nombre de la entidad y de obligar a la misma bajo los términos de las presentes condiciones de uso. 
+                El uso del Sitio por parte de quienes carecieran de capacidad legal para hacerlo será responsabilidad de los padres, tutores, curadores o de quienes los representen legalmente.
+                <br><br>
+                <strong>IMPORTANTE:</strong> Todas las imágenes de los productos son sólo a modo ilustrativo y pueden diferir del artículo en stock. Los precios indicados tienen IVA incluído y pueden sufrir variaciones sin previo aviso. 
+                Disponibilidad sujeta a stock.
+            </p>
+        </div>
+    </footer>
+
+    <!-- contactoForm: Modal OK-->
+    <div class="modal fade" id="modalOK" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Contacto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Muchas gracias!!! En breve nos pondremos en contacto con usted.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- contactoForm: Modal FAIL-->
+    <div class="modal fade" id="modalFAIL" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Contacto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Por favor complete todos los campos.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <!-- AOS Animaciones -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <!-- Mis scripts -->
+    <script src="./js/componentePC.js"></script>
+    <script src="./js/galeria.js"></script>
+    <script src="./js/contactoForm.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,37 @@
+@import "mixins";
+
+.footer{
+    padding: 20px 10px 40px;
+    background: linear-gradient(0deg, $color-primario 0%, $color-secundario 100%);
+    font-family: $primary-font;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    .footer__rrss{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        .footer__rrssTexto{
+            font-style: normal;
+            font-weight: bold;
+            font-size: medium;
+            text-decoration: underline;
+        }
+        .footer__rrssImg{
+            gap: 7px;
+            .main__link{
+                @include links($black);
+            }
+        }
+    }
+    .footer__legales{
+        margin: 10px;
+        padding: 0px 50px 0px;
+    }
+}
+

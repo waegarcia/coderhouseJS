@@ -1,0 +1,64 @@
+// media querys con max-width
+@media only screen and (max-width: 1400px) {
+}
+
+@media only screen and (max-width: 1200px) {
+    .main__componentesImg{
+        #bannerGrande{
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .main__pcArmadaImg{
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .mapa{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    @mixin ocultar {
+        display: none;
+    }
+
+    .main__wsp,.main__componentesImg{
+        @include ocultar();
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    #carouselDesktop{
+        display: none;
+    }
+}
+
+// media querys con min-width
+@media only screen and (min-width: 1400px) {
+}
+
+@media only screen and (min-width: 1200px) {
+    #bannerChico{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+}
+
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 576px) {
+}
+
+@media only screen and (min-width: 426px) {
+    #carouselMobile{
+        display: none;
+    }
+}

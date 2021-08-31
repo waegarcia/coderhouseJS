@@ -1,0 +1,147 @@
+@import "reseteador";
+@import "variables";
+@import "header";
+@import "footer";
+@import "media";
+@import "mixins";
+
+.main{
+    background-color: $white;
+    text-align: center;
+    font-family: $primary-font;
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .main__texto{
+        align-content: center;
+        color: $color-terciario;
+        .main__titulo{
+            margin: 10px;
+            font-weight: bolder;
+        }
+
+        // index
+        #carouselDesktop{
+            margin: 10px;
+        }
+        #carouselMobile{
+            padding: 3px;
+        }
+
+        .button {
+            height: 100%;
+            border: 2px solid $black;
+            border-radius: 3px;
+            color: $white;
+            background-color: $orange-tres;
+            text-align: center;
+            font-weight: bolder;
+            font-family: $primary-font;
+            cursor: pointer;
+            padding: 5px 15px;
+        }
+
+        // carrito
+        .main__carrito{
+            margin: 90px 0px 30px;
+            
+            .main__carritoTitulo{
+                padding: 0px 15px;
+                font-size: 2.1rem;
+            }
+            .main__carritoTitulo--subtitulo{
+                font-size: 1.1rem;
+                @extend .main__carritoTitulo;
+            }
+            // #carritoContainer{}
+        }
+
+        // error
+        .main__error{
+            margin: 90px 0px 30px;
+            
+            .main__errorTitulo{
+                padding: 0px 15px;
+                font-size: 2.1rem;
+            }
+            .main__errorTitulo--subtitulo{
+                font-size: 1.1rem;
+                @extend .main__errorTitulo;
+            }
+            .main__errorButton{
+                margin: 35px 0px;
+                background-color: $orange-cuatro;
+                @extend .button;
+                .main__link{
+                    @include links($white);
+                }
+                &:hover{
+                    transition: 0.5s;
+                    background-color: $black;
+                }
+            }
+        }
+    }
+
+    // componentes
+    #componentesContainer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .galeria{
+            padding: 30px;
+            max-width: 75%;
+            min-width: 320px;
+            .col{
+                .card{
+                    padding: 15px;
+                    .card-body{
+                        .card-title{
+                            font-family: $primary-font;
+                            color: $color-terciario;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // contacto
+    .main__form{
+        margin: 40px 0px;
+        font-weight: bolder;
+        border: 1px solid $orange-cuatro;
+        border-radius: 15px;
+        padding: 10px;
+        background-color: $orange-cero;
+        color: $black;
+        .form-control {
+            &:focus {
+                border-color: $orange-tres;
+                box-shadow: 0 0 0 0.01rem $orange-tres;
+            }
+        }
+        .form__button{
+            @extend .button;
+            &:hover{
+                transition: 0.5s;
+                background-color: $black;
+            }
+        }
+    }
+
+    // logo de whatsApp
+    .main__wsp{
+        width: 100%;
+        height: 100%;
+        text-align: right;
+        position: sticky;
+        bottom: 0px;
+        z-index: 1;
+    }
+}

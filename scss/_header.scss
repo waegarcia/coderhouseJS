@@ -1,0 +1,37 @@
+@import "mixins";
+
+.header{
+    width: 100%;
+    font-family: $primary-font;
+    background: linear-gradient(180deg, $color-primario 0%, $color-secundario 100%);
+    font-weight: bold;
+    position: sticky;
+    z-index: 3;
+    top: 0px;
+    .header__navbar{
+        padding: 10px 0px;
+        .nav-link{
+            color: $black;
+            &:hover{
+                color: $white;
+                background-color: $color-terciario;
+            }
+        }
+        
+        .header__navbarForm{
+            .navbarForm__button{
+                color: $white;
+                font-weight: bolder;
+                background-color: $orange-cuatro;
+                border-color: $black;
+                .header__button__link{
+                    @include links($white);
+                }
+                &:hover{
+                    transition: 0.5s;
+                    background-color: $black;
+                }
+            }
+        }
+    }
+}
