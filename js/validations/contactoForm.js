@@ -1,3 +1,5 @@
+/* Validaciones en el formulario de contacto */
+
 let contactoForm = $("#contactoForm");
 let datosOK = false;
 

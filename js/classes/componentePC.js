@@ -1,3 +1,6 @@
+/* Clase ComponentePc y objetos de la clase que luego son agregados a una lista
+y guardados en sessionStorage */
+
 const rutaImg = "./img/componentes/";
 
 class ComponentePC {
@@ -19,6 +22,6 @@ const discoRigido = new ComponentePC(6, "Disco Rigido Western Digital", 6700.00,
 const fuente = new ComponentePC(7, "Fuente Asus rog", 8040.00, "fuente7.jpeg");
 const gpu = new ComponentePC(8, "Placa de video MSI", 135000.00, "GPU8.jpeg");
 
-// Agrego los objetos al array componentes y los guardo en el localStorage.
+// Agrego los objetos al array componentes y los guardo en sessionStorage.
 const listaComponentes = [micro, mother, memoria, gabinete, coolerMicro, discoRigido, fuente, gpu];
-localStorage.setItem("ComponentesPC", JSON.stringify(listaComponentes));
+sessionStorage.setItem("ComponentesPC", JSON.stringify(listaComponentes));

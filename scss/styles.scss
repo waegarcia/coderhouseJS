@@ -86,7 +86,7 @@
     }
 
     // componentes
-    #componentesContainer{
+    #componentes{
         display: flex;
         align-items: center;
         justify-content: center;
@@ -104,6 +104,14 @@
                             font-family: $primary-font;
                             color: $color-terciario;
                             text-decoration: underline;
+                        }
+                        .btn__componente{
+                            color: $white;
+                            background-color: $orange-tres;
+                            &:hover{
+                                transition: 0.5s;
+                                background-color: $black;
+                            }
                         }
                     }
                 }
@@ -143,5 +151,18 @@
         position: sticky;
         bottom: 0px;
         z-index: 1;
+    }
+}
+
+// modal para formulario de contacto
+#modalOK, #modalFAIL {
+    font-family: $primary-font;
+    .btn__modal{
+        color: $white;
+        background-color: $orange-tres;
+        &:hover{
+            transition: 0.5s;
+            background-color: $black;
+        }
     }
 }
