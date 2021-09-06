@@ -30,6 +30,9 @@ $(".btn__componente").one("click", function(e){
         ` <i class="fa fa-shopping-cart"></i>`
     );
     carrito.push(parseInt(e.target.id));
+
+    // animacion para que aparezca el boton carrito si se añade un componente
+    $("#btnCarrito").slideDown("slow");
 });
 
 // añadir la lista carrito cuando hago click en el boton carrito

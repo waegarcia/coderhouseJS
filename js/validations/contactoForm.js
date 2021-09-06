@@ -9,7 +9,8 @@ function enviarDatosContacto(e){
     validarFormulario();
 
     if(datosOK) {
-        $("#modalOK").modal("show");
+        // Animacion para que aparezca el modal de OK si se completaron todos los datos del formulario
+        $("#modalOK").modal("show").slideDown(1000);
 
         $("#contactoInputNombre").val("");
         $("#contactoInputMail").val("");
@@ -24,7 +25,8 @@ function validarFormulario(){
     let contactoTextArea = $("#contactoTextArea").val();
 
     if(contactoInputNombre == "" || contactoInputMail == "" || contactoTextArea == ""){
-        $("#modalFAIL").modal("show");
+        // Animacion para que aparezca el modal de error si falta completar datos del formulario
+        $("#modalFAIL").modal("show").slideDown("fast");
         datosOK = false;
 
     }else{
