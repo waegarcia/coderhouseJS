@@ -3,48 +3,48 @@
         "id": 1,
         "nombre": "Micropocesador Ryzen 7",
         "precio": 25000,
-        "img": "./img/componentes/micro1.jpeg"
+        "img": "../../img/componentes/micro1.jpeg"
     },
     {
         "id": 2,
         "nombre": "Mother Gigabyte",
         "precio": 7800,
-        "img": "./img/componentes/mother2.jpeg"
+        "img": "../img/componentes/mother2.jpeg"
     },
     {
         "id": 3,
         "nombre": "Memoria Kingston",
         "precio": 9800,
-        "img": "./img/componentes/memoria3.jpeg"
+        "img": "../img/componentes/memoria3.jpeg"
     },
     {
         "id": 4,
         "nombre": "Gabinete Cooler Master",
         "precio": 6590,
-        "img": "./img/componentes/gabinete4.jpeg"
+        "img": "../img/componentes/gabinete4.jpeg"
     },
     {
         "id": 5,
         "nombre": "Cooler Microprocesador",
         "precio": 1550,
-        "img": "./img/componentes/cooler5.jpeg"
+        "img": "../img/componentes/cooler5.jpeg"
     },
     {
         "id": 6,
         "nombre": "Disco Rigido Western Digital",
         "precio": 6700,
-        "img": "./img/componentes/HDD6.jpeg"
+        "img": "../img/componentes/HDD6.jpeg"
     },
     {
         "id": 7,
         "nombre": "Fuente Asus rog",
         "precio": 8040,
-        "img": "./img/componentes/fuente7.jpeg"
+        "img": "../img/componentes/fuente7.jpeg"
     },
     {
         "id": 8,
         "nombre": "Placa de video MSI",
         "precio": 135000,
-        "img": "./img/componentes/GPU8.jpeg"
+        "img": "../img/componentes/GPU8.jpeg"
     }
 ]

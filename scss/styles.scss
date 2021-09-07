@@ -45,7 +45,7 @@
 
         // carrito
         .main__carrito{
-            margin: 90px 0px 30px;
+            margin: 30px 0px 30px;
             
             .main__carritoTitulo{
                 padding: 0px 15px;
@@ -55,7 +55,6 @@
                 font-size: 1.1rem;
                 @extend .main__carritoTitulo;
             }
-            // #carritoContainer{}
         }
 
         // error
@@ -82,6 +81,17 @@
                     background-color: $black;
                 }
             }
+        }
+    }
+
+    #carritoContainer{
+        width: 90%;
+
+        #totales{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
         }
     }
 
