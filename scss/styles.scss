@@ -86,12 +86,34 @@
 
     #carritoContainer{
         width: 90%;
-
+        color: $color-terciario;
         #totales{
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
+            #iva{
+                &:focus {
+                    border-color: $orange-tres;
+                    box-shadow: 0 0 0 0.01rem $orange-tres;
+                }
+            }
+            #cuota{
+                border: 1px solid $orange-cuatro;
+                &:focus {
+                    border-color: $orange-tres;
+                    box-shadow: 0 0 0 0.01rem $orange-tres;
+                }
+            }
+            .btn__total{
+                margin: 35px 0px;
+                background-color: $orange-cuatro;
+                @extend .button;
+                &:hover{
+                    transition: 0.5s;
+                    background-color: $black;
+                }
+            }
         }
     }
 

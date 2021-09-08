@@ -70,6 +70,8 @@ $("#btnEjecutarCotizacion").one("click",function(e){
 
     // tengo el monto total de las cards que se cargan en la pagina
     // pero me falta la logica de los botones + y -
+    // el boton vaciar carrito
+    // eliminar un producto
 
     // evaluo si se quita el porcentaje del IVA o no
     if(iva){
@@ -85,7 +87,7 @@ $("#btnEjecutarCotizacion").one("click",function(e){
     <h4>TOTAL : $${total}</h4>
     <p>El monto de cada cuota es: $${montoCuota}</p>
     <br><br>
-    <p>¡MUCHAS GRACIAS POR CONFIAR EN NOSOTROS!</p>
+    <p><strong>¡MUCHAS GRACIAS POR CONFIAR EN NOSOTROS!</strong></p>
     `;
 
     $("#resultadoCotizacion").append(resultadoTexto);

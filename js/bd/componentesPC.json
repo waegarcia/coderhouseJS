@@ -3,7 +3,7 @@
         "id": 1,
         "nombre": "Micropocesador Ryzen 7",
         "precio": 25000,
-        "img": "../../img/componentes/micro1.jpeg"
+        "img": "../img/componentes/micro1.jpeg"
     },
     {
         "id": 2,
