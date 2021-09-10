@@ -46,15 +46,22 @@ $(document).ready(function () {
                                             <div class="card-body">
                                                 <h3 class="card-title">${componenteSeleccionado.nombre}</h3>
                                                 <h5>Precio por unidad: $${componenteSeleccionado.precio}</h5>
-                                                <!-- <button class="btn btn-info" type="button" > + </button> -->
-                                                <!-- <button class="btn btn-danger" type="button" > - </button> -->
-                                                <!-- <br><p><strong>Cantidad: 1</strong></p> -->
                                             </div>
                                         </div>
                                     </div>`;
         total += componenteSeleccionado.precio;
     });
     $("#seleccionados").append(divSeleccionados);
+
+    // boton vaciar carrito
+    $("#vaciarCarrito").click(function(e){
+        $("#seleccionados").hide();
+        $("#totales").hide();
+        $("#vaciarCarrito").hide();
+        $(".escondido").show();
+        $("#carritoVacio").fadeIn("fast");
+        total = 0;
+    });
 
     /** COTIZACION */
     // escucho el radio button del iva para saber si descuento el 21% o no
@@ -69,10 +76,8 @@ $(document).ready(function () {
 
     // boton que ejecuta la cotizacion
     $("#btnEjecutarCotizacion").one("click",function(e){
+        $("#vaciarCarrito").hide();
 
-        // tengo el monto total de las cards que se cargan en la pagina
-        // pero me falta la logica de los botones + y -
-        // el boton vaciar carrito
         // eliminar un producto
 
         // evaluo si se quita el porcentaje del IVA o no

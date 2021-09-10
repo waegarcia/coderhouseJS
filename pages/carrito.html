@@ -58,6 +58,11 @@
             <div class="main__carrito">
                 <p class="main__carritoTitulo">CARRITO DE COMPRAS</p>
                 <p class="main__carritoTitulo--subtitulo">Aqui encontraras los productos que seleccionaste:</p>
+                <div id="carritoVacio" class="escondido">
+                    <br><br>
+                    <h3><strong>¡VACIASTE EL CARRITO!</strong></h3>
+                    <p>(Podes volver a seleccionar los productos en la pagina de inicio.)</p>
+                </div>
             </div>
         </div>
 
@@ -66,10 +71,16 @@
             <!-- productos seleccionados -->
             <div class="row row-cols-1 row-cols-md-2 g-4 galeria" id="seleccionados">
             </div>
-            <hr>
+            <br><br>
+            <button type="button" class="btn btn-danger" id="vaciarCarrito">Vaciar carrito</button>
+
+            <button type="button" class="btn__homeCarrito escondido">
+                <a href="../index.html" class="link">HOME</a>
+            </button>
 
             <!-- Cotizacion -->
             <div id="totales">
+                <hr style="width: 100%; border: solid 2px"><br>
 
                 <!-- Iva -->
                 <h5>¿Desea factura A?</h5>
@@ -98,8 +109,8 @@
                     <div id="resultadoCotizacion" style="display: none;">
                     </div>
                 </div>
+                <hr style="width: 100%; border: solid 2px">
             </div>
-            <hr>
         </div>
         <!-- carrito fin -->
 
@@ -109,7 +120,7 @@
     </main>
 
     <footer class="footer">
-        <div class="footer__rrss" data-aos="fade-up" data-aos-delay="500">
+        <div class="footer__rrss" >
             <span class="footer__rrssTexto">Nuestras redes sociales:</span>
             <div class="footer__rrssImg">
                 <a href="https://es-la.facebook.com/" class="fa fa-facebook-square fa-2x main__link"></a>
@@ -117,7 +128,7 @@
                 <a href="https://twitter.com/home?lang=es" class="fa fa-twitter-square fa-2x main__link"></a>
             </div>
         </div>
-        <div class="footer__legales" data-aos="fade-up">
+        <div class="footer__legales" >
             <p>
                 <strong>Aceptación de los términos y condiciones de uso:</strong><br>
                 El uso del Sitio implica la declaración por parte del Usuario de que comprende, conoce y acepta los términos y condiciones que a continuación se detallan, y por ello se obliga expresamente a cumplir con los mismos. 

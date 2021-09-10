@@ -87,6 +87,7 @@
     #carritoContainer{
         width: 90%;
         color: $color-terciario;
+        font-family: $primary-font;
         #totales{
             display: flex;
             align-items: center;
@@ -113,6 +114,18 @@
                     transition: 0.5s;
                     background-color: $black;
                 }
+            }
+        }
+        .btn__homeCarrito{
+            margin: 35px 0px;
+            padding: 10px;
+            background-color: $orange-cuatro;
+            .link{
+                @include links($white);
+            }
+            &:hover{
+                transition: 0.5s;
+                background-color: $black;
             }
         }
     }
@@ -197,4 +210,8 @@
             background-color: $black;
         }
     }
+}
+
+.escondido{
+    @include escondido();
 }
