@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+    
     // VARIABLES GLOBALES
     let iva = false; // si no se selecciona SI en el radio button entoces no se descuenta el IVA
     let cantCuotas = 1; // si no se selecciona la cantidad de cuotas por default es 1
@@ -40,26 +40,47 @@ $(document).ready(function () {
     // creo las cards de los componentes seleccionados
     let divSeleccionados = ``;
     listaSeleccionados.forEach(componenteSeleccionado => {
-        divSeleccionados += `<div class="col" style="display:flex;align-items:center;justify-content:space-between;flex-direction:column;">
+        divSeleccionados += `<div class="col" id="componente${componenteSeleccionado.id}" style="display:flex;align-items:center;justify-content:space-between;flex-direction:column;">
                                         <div class="card" style="display:flex;align-items:center;justify-content:center;padding:20px;max-width:50%;">
                                             <img src="${componenteSeleccionado.img}" class="card-img-top" alt="${componenteSeleccionado.nombre}" style="max-width:50%;">
-                                            <div class="card-body">
+                                            <div class="card-body" id="carrito__precio">
                                                 <h3 class="card-title">${componenteSeleccionado.nombre}</h3>
                                                 <h5>Precio por unidad: $${componenteSeleccionado.precio}</h5>
                                             </div>
+                                            <button type="button" class="btn btn-danger btn-eliminar" id="${componenteSeleccionado.id}">Eliminar</button>
                                         </div>
                                     </div>`;
         total += componenteSeleccionado.precio;
     });
     $("#seleccionados").append(divSeleccionados);
 
-    // boton vaciar carrito
-    $("#vaciarCarrito").click(function(e){
+
+    // funcion para ocultar o mostrar distintos elemtos del DOM
+    const transicion = () => {
         $("#seleccionados").hide();
         $("#totales").hide();
         $("#vaciarCarrito").hide();
         $(".escondido").show();
         $("#carritoVacio").fadeIn("fast");
+    }
+
+    // boton borrar un componente
+    $(".btn-eliminar").click(function(e){
+        let componenteEliminar = e.target.id;
+        listaSeleccionados.forEach(componente => {
+            if(componenteEliminar == componente.id){
+                total -= componente.precio;
+                $("#componente"+componente.id).hide();
+            }
+        });
+        if(total == 0){
+            transicion();
+        }
+    });
+
+    // boton vaciar carrito
+    $("#vaciarCarrito").click(function(e){
+        transicion();
         total = 0;
     });
 
@@ -76,9 +97,8 @@ $(document).ready(function () {
 
     // boton que ejecuta la cotizacion
     $("#btnEjecutarCotizacion").one("click",function(e){
+        $(".btn-eliminar").hide();
         $("#vaciarCarrito").hide();
-
-        // eliminar un producto
 
         // evaluo si se quita el porcentaje del IVA o no
         if(iva){
